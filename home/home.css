@@ -1,0 +1,273 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --roxo: #626CDE;
+    --cor-texto: black;
+    --cor-background: white;
+    --fonte-padrao: "Poppins";
+}
+
+html {
+    overflow-x: hidden;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: var(--fonte-padrao);
+}
+
+header {
+    background-color: var(--roxo);
+    padding: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.botoes-header {
+    display: flex;
+    gap: 10%;
+}
+
+header a {
+    text-decoration: none;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-wrap: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    color: #626CDE;
+}
+
+header a:first-child {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.pesquisa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+    padding: 15px 350px;
+    position: relative;
+    overflow: hidden;
+    background-color: #626CDE;
+}
+
+.pesquisa h2 {
+    padding: 10px; 
+    z-index: 1;
+    text-wrap: nowrap;
+}
+
+.box-pesquisa {
+    background-color: white;
+    padding: 8px;
+    color: black;
+    width: 100%;
+    border-radius: 15px;
+    z-index: 1;
+    font-size: 90%;
+    width: 100%;
+    display: flex;
+    overflow:visible;
+    min-width: 280px;
+}
+
+.box-input {
+    padding: 3px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.box-input input,
+.box-input input:focus{
+    border: none;
+
+}
+
+button {
+    border: none;
+    background-color: var(--roxo);
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    text-wrap: nowrap;
+    padding: 5px;
+}
+
+.wave-border {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.filtros {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+    padding: .5%;
+    overflow: scroll;
+}
+.filtros::-webkit-scrollbar {
+    display: none;
+}
+
+.filtros button {
+    background-color: transparent;
+    color: var(--roxo);
+    font-weight: 600;
+    border: 2px solid var(--roxo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-wrap: nowrap;
+
+}
+.filtros button i {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+main {
+    height: 100vh;
+    margin: 0 3% 3% 3%;
+    
+}
+
+main .vaga {
+    border: 2px solid rgb(160, 160, 160) ;
+    height: 100px;
+    border-radius: 10px;
+}
+
+#btn-cadastrar-vaga {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 15px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+#btn-cadastrar-vaga i {
+    font-size: 1.8rem;
+}
+#btn-cadastrar-vaga.show {
+    display: flex;
+}
+
+.cadastrar-vaga {
+    width: 600px;
+    height: 250px;
+    background-color: #a8b0ff;
+    border: 1px solid black;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    border-radius: 20px;
+    padding: 40px;
+    z-index: 3;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.cadastrar-vaga.show {
+    display: flex;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.521);
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.overlay.show {
+    display: block;
+}
+
+#fechar {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 15px;
+    height: 15px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+#fechar i {
+    font-size: 1.3rem;
+}
+
+.cadastrar-vaga h1 {
+    position: absolute;
+    top: 20px;
+}
+
+.container-inputs {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    flex-direction: column;
+    width: 100%;
+}
+
+.aux {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+input {
+    padding: 7px;
+    border-color: white;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.226);
+    margin-bottom: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: none;
+}
+
+#descricao {
+    height: 100%;
+}
+
+#btn-cadastrar-vaga2 {
+    margin-bottom: -30px;
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 1.1rem;
+}
