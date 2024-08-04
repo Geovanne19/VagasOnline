@@ -151,6 +151,25 @@ main {
     overflow: hidden;
 }
 
+.vaga.expanded {
+    height: auto;
+}
+
+.toggle-button {
+    display: none;
+}
+
+.btn-candidatar-se {
+    display: none;
+    margin: auto;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.vaga.expanded .btn-candidatar-se {
+    display: block;
+}
+
 
 
 /* ------------------------------------------------------------- */

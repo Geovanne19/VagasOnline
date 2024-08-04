@@ -23,3 +23,20 @@ document.querySelector('.cadastrar-vaga').addEventListener('submit', function (e
     
     alert('Vaga cadastrada com sucesso!')
 });
+
+document.querySelectorAll('.vaga').forEach(vaga => {
+    vaga.addEventListener('click', () => {
+        vaga.classList.toggle('expanded');
+        const applyButton = vaga.querySelector('.apply-button');
+
+        if (vaga.classList.contains('expanded')) {
+            applyButton.style.display = 'block'; // Exibir botão
+        } else {
+            applyButton.style.display = 'none'; // Ocultar botão
+        }
+    });
+});
+
+document.querySelector('btn-candidatar-se').addEventListener('click', function (event) {
+    alert('Teste')
+});
