@@ -88,6 +88,19 @@ document.getElementById('candidato').addEventListener('submit', function (event)
     } else {
         alert('Conta criada com sucesso!');
         form.submit();
+        const form_candidato = document.getElementById('candidato');
+        const FormData = new FormDataEvent(form_candidato)
+        const formObject = {}
+
+        FormData.forEach((value, key) => {
+            formObject[key] = value;
+        })
+
+        const json = JSON.stringify(formObject, null, 2);
+
+        console.log('okkkimikjb candidato')
+
+        console.log(json);
     }
 });
 
@@ -101,6 +114,19 @@ document.getElementById('empresa').addEventListener('submit', function (event) {
     } else {
         alert('Conta criada com sucesso!');
         form.submit();
+        const form_candidato = document.getElementById('empresa');
+        const FormData = new FormDataEvent(form_candidato)
+        const formObject = {}
+
+        FormData.forEach((value, key) => {
+            formObject[key] = value;
+        })
+
+        const json = JSON.stringify(formObject, null, 2);
+
+        console.log('okkkimikjb empresa')
+
+        console.log(json);
     }
 });
 
