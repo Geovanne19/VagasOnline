@@ -40,3 +40,47 @@ document.querySelectorAll('.vaga').forEach(vaga => {
 document.querySelector('btn-candidatar-se').addEventListener('click', function (event) {
     alert('Teste')
 });
+
+// Supondo que você tenha a URL do seu backend
+const apiUrl = 'URL_DO_SEU_BACKEND';
+
+// Função para buscar dados do backend
+async function fetchVagas() {
+    try {
+        const response = await fetch(apiUrl);
+        const vagas = await response.json();
+        renderVagas(vagas);
+    } catch (error) {
+        alert('Erro ao buscar vagas!')
+    }
+}
+
+// Função para renderizar as vagas no DOM
+function renderVagas(vagas) {
+    const main = document.querySelector('main');
+
+    vagas.forEach(vaga => {
+        const vagaDiv = document.createElement('div');
+        vagaDiv.classList.add('vaga');
+
+        vagaDiv.innerHTML = `
+            <div class="cabecalho">
+                <img src="imagens/logo.png" alt="Logo da empresa" class="logo">
+                <div class="container-nomes-vaga">
+                    <h2>${vaga.cargo}</h2>
+                    <p>${vaga.nome_empresa}</p>
+                </div>
+            </div>
+            <div class="descricao">
+                ${vaga.descricao}
+            </div>
+            <button class="btn-candidatar-se">Candidatar-se para esta vaga</button>
+        `;
+
+        main.appendChild(vagaDiv);
+    });
+}
+
+// Chama a função para buscar e renderizar as vagas quando a página carregar
+document.addEventListener('DOMContentLoaded', fetchVagas);
+

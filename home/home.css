@@ -56,7 +56,7 @@ header a:first-child {
     justify-content: center;
     color: white;
     flex-direction: column;
-    padding: 15px 350px;
+    padding: 10px 350px;
     position: relative;
     overflow: hidden;
     background-color: #626CDE;
@@ -93,7 +93,6 @@ header a:first-child {
 .box-input input,
 .box-input input:focus{
     border: none;
-
 }
 
 button {
@@ -104,7 +103,7 @@ button {
     font-weight: 500;
     cursor: pointer;
     text-wrap: nowrap;
-    padding: 5px;
+    padding: 5px 10px;
 }
 
 main {
@@ -284,7 +283,7 @@ input:focus {
     height: 100%;
 }
 
-#btn-cadastrar-vaga2 {
+#btn-cadastrar-vaga-final {
     margin-bottom: -30px;
     margin-top: 20px;
     padding: 15px;
@@ -295,4 +294,50 @@ footer {
     color: #626CDE;
     display: flex;
     align-items: center;
+}
+
+@media (max-width: 768px) {
+    .pesquisa {
+        padding: 10px;
+    }
+
+    .box-pesquisa {
+        padding: 5px;
+    }
+
+    main {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .cadastrar-vaga {
+        width: 90%;
+        padding: 20px;
+    }
+
+    #btn-cadastrar-vaga {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .botoes-header {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .box-pesquisa {
+        padding: 5px;
+    }
+
+    .cadastrar-vaga {
+        padding: 15px;
+    }
+
+    #btn-cadastrar-vaga {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
 }
