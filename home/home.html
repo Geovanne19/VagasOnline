@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Vagas Online</title>
     <link rel="stylesheet" href="home.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="imagens/logo-vagas-online.png" type="image/x-icon">
 
 </head>
 
@@ -28,7 +29,7 @@
     </form>
     <div class="overlay"></div>
     <header>
-        <h1>Vagas Online</h1>
+        <h1><img src="imagens/logo-vagas-online.png" alt="">Vagas Online</h1>
         <div class="botoes-header">
             <a href="https://geovanne19.github.io/HTML-e-CSS/VagasOnline/login.html">Entrar</a>
             <a href="#">Cadastre-se</a>
@@ -45,7 +46,19 @@
         </div>
     </section>
     <main>
-
+        <div class="vaga">
+            <div class="cabecalho">
+                <img src="imagens/logo.png" alt="Logo da empresa" class="logo">
+                <div class="container-nomes-vaga">
+                    <h2>${vaga.cargo}</h2>
+                    <p>${vaga.nome_empresa}</p>
+                </div>
+            </div>
+            <div class="descricao">
+                ${vaga.descricao}
+            </div>
+            <button class="btn-candidatar-se">Candidatar-se para esta vaga</button>
+        </div>
     </main>
     <script src="home.js"></script>
 </body>

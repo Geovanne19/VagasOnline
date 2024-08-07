@@ -18,8 +18,8 @@ html {
 }
 
 .container {
-    width: 250px;
-    height: 400px;
+    width: 260px;
+    height: 410px;
     background-color: white;
     border-radius: 30px;
     display: flex;
