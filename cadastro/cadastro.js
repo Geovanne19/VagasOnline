@@ -31,27 +31,27 @@ const validateForm = (formId) => {
     const confirmaSenha = form.querySelector('#confirma-senha');
     const fileInputs = form.querySelectorAll('input[type="file"]');
 
-    // Validate Nome or Nome Fantasia
+    // Valida Nome ou Nome Fantasia
     if (nome && (nome.value.length < 10 || /\d/.test(nome.value))) {
         errors.push('* Nome deve ter pelo menos 10 letras.');
     }
 
-    // Validate Email or E-mail Corporativo
+    // Valida Email ou E-mail Corporativo
     if (email && (email.value.length < 10 || !/@/.test(email.value) || (email.value.match(/\d/g) || []).length > 2)) {
         errors.push('* E-mail inválido.');
     }
 
-    // Validate CPF
+    // Valida CPF
     if (cpf && (/\D/.test(cpf.value) || cpf.value.length > 11)) {
         errors.push('* CPF inválido.');
     }
 
-    // Validate CEP
+    // Valida CEP
     if (cep && (/\D/.test(cep.value) || cep.value.length > 8)) {
         errors.push('* CEP inválido.');
     }
 
-    // Validate Senhas
+    // Valida Senhas
     const senhaPattern = /^(?=.*\d.*\d.*\d.*\d.*\d.*\d)(?=.*[a-zA-Z].*[a-zA-Z])(?=.*[!@#$%^&*()_+{}\[\]:;"'<>,./?]).{9,12}$/;
     if (!senhaPattern.test(senha.value)) {
         errors.push('* A senha deve ter de 9-12 dígitos, com pelo menos 6 números, 2 letras e 1 caractere especial.');
@@ -70,7 +70,7 @@ const showErrorMessages = (errors) => {
     errorList.innerHTML = errors.map(error => `<li>${error}</li>`).join('');
     errorMessageDiv.style.display = 'block';
 
-    // Hide error message when clicking anywhere on the screen
+    // Esconde mesagem de erro
     document.addEventListener('click', () => {
         errorMessageDiv.style.display = 'none';
         document.getElementById('candidato').reset();
@@ -134,11 +134,11 @@ document.getElementById('empresa').addEventListener('submit', function (event) {
 const updateLabelColor = (input) => {
     const label = document.querySelector(`label[for="${input.id}"]`);
     if (input.files.length > 0) {
-        label.style.backgroundColor = '#d4edda'; // Cor de fundo verde claro para indicar que um arquivo foi selecionado
-        label.style.borderColor = '#c3e6cb'; // Cor da borda verde claro
+        label.style.backgroundColor = '#d4edda'; 
+        label.style.borderColor = '#c3e6cb'; 
     } else {
-        label.style.backgroundColor = 'white'; // Cor de fundo padrão
-        label.style.borderColor = 'var(--roxo)'; // Cor da borda padrão
+        label.style.backgroundColor = 'white'; 
+        label.style.borderColor = 'var(--roxo)'; 
     }
 }
 

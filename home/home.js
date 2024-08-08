@@ -41,8 +41,8 @@ document.querySelector('btn-candidatar-se').addEventListener('click', function (
     alert('Teste')
 });
 
-// Supondo que você tenha a URL do seu backend
-const apiUrl = 'URL_DO_SEU_BACKEND';
+//URL do backend
+const apiUrl = 'URL_BACKEND';
 
 // Função para buscar dados do backend
 async function fetchVagas() {
